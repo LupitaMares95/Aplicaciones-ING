@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="findMyAge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your year of birth" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y7D-PQ-iAb">
+                                <rect key="frame" x="0.0" y="119" width="375" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="GuR-FJ-i0t"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your age is 0 years" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ARE-zH-7Nq">
+                                <rect key="frame" x="0.0" y="215" width="375" height="22.666666666666657"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="1" green="0.98935370240975307" blue="0.95596667267266455" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.95643496409264084" green="0.98167656516912793" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ul1-e4-tcb">
+                                <rect key="frame" x="249" y="266" width="106" height="50"/>
+                                <color key="backgroundColor" red="0.32214909811015974" green="0.79840180837563457" blue="0.53490488594864927" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="6YB-19-OzU"/>
+                                    <constraint firstAttribute="width" constant="70" id="TGP-Fa-xYT"/>
+                                </constraints>
+                                <state key="normal" title="Find Age">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="BuFindDage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vei-tp-77v"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.87977871192893398" green="0.6557776502237721" blue="0.60298374629773865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ul1-e4-tcb" secondAttribute="trailing" constant="20" id="0q3-Ca-6h0"/>
+                            <constraint firstItem="y7D-PQ-iAb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2VH-pE-evx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="y7D-PQ-iAb" secondAttribute="trailing" id="DKW-sg-Gz2"/>
+                            <constraint firstItem="y7D-PQ-iAb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="75" id="izc-DE-pS6"/>
+                            <constraint firstItem="ARE-zH-7Nq" firstAttribute="top" secondItem="y7D-PQ-iAb" secondAttribute="bottom" constant="66" id="piR-6f-bMq"/>
+                            <constraint firstItem="ARE-zH-7Nq" firstAttribute="trailing" secondItem="y7D-PQ-iAb" secondAttribute="trailing" id="s9C-5n-DcW"/>
+                            <constraint firstItem="ARE-zH-7Nq" firstAttribute="leading" secondItem="y7D-PQ-iAb" secondAttribute="leading" id="vLm-NJ-2e4"/>
+                            <constraint firstItem="Ul1-e4-tcb" firstAttribute="top" secondItem="ARE-zH-7Nq" secondAttribute="bottom" constant="52.5" id="vbD-cK-ICB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="laShowAge" destination="ARE-zH-7Nq" id="V0c-V2-DN1"/>
+                        <outlet property="txtYearOfBirth" destination="y7D-PQ-iAb" id="4it-uJ-soD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="31.934032983508249"/>
+        </scene>
+    </scenes>
+</document>
